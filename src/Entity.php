@@ -348,10 +348,6 @@ abstract class Entity
 
             // Get file contents and base64 encode.
             if ($isFile) {
-                if (!is_readable($propValue)) {
-                    continue;
-                }
-                
                 $propValue = base64_encode(file_get_contents($propValue));
             }
             
